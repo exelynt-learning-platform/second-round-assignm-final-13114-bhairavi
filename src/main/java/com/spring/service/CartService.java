@@ -24,13 +24,13 @@ public class CartService {
 	    @Autowired
 	    private UserRepository userRepo;
 
-	    // ✅ get logged user
+	    // get logged user
 	    private User getUser() {
 	        String email = SecurityContextHolder.getContext().getAuthentication().getName();
 	        return userRepo.findByEmail(email).orElseThrow();
 	    }
 
-	    // ✅ add to cart
+	    //  add to cart
 	    public Cart addToCart(Long productId, int quantity) {
 
 	        User user = getUser();
@@ -47,12 +47,12 @@ public class CartService {
 	        return cartRepo.save(cart);
 	    }
 
-	    // ✅ view cart
+	    // view cart
 	    public List<Cart> getCart() {
 	        return cartRepo.findByUser(getUser());
 	    }
 
-	    // ✅ remove
+	    // remove
 	    public void remove(Long id) {
 
 	        Cart cart = cartRepo.findById(id).orElseThrow();

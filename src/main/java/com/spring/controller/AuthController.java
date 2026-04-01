@@ -10,7 +10,6 @@ import com.spring.entity.User;
 import com.spring.service.AuthService;
 
 import jakarta.validation.Valid;
-
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
@@ -24,7 +23,7 @@ public class AuthController {
         return service.register(user);
     }
 
-    // Login 
+    // 
     @PostMapping("/login")
     public Map<String, String> login(@RequestBody AuthRequest request) {
         return service.login(request);
