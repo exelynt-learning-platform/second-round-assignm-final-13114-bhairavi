@@ -10,7 +10,7 @@ import com.spring.entity.AuthRequest;
 import com.spring.entity.Role;
 import com.spring.entity.User;
 import com.spring.repository.UserRepository;
-import com.spring.config.JwtUtil;   // 👈 import add करो
+import com.spring.config.JwtUtil;  
 
 @Service
 public class AuthService {
