@@ -23,7 +23,7 @@ public class ProductController {
 
     @PostMapping
     public Product add( @ Valid @RequestBody Product p) {
-    	  System.out.println("👉 Product Added: " + p);
+    	  System.out.println("Product Added: " + p);
         return service.save(p);
     }
 
